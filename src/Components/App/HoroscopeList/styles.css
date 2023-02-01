@@ -1,6 +1,19 @@
 .horoscopeList{
+    width: 800px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 200px);
     gap: 20px;
     justify-content: space-evenly;
+}
+
+.sign{
+    object-fit: contain;
+    height: 200px;
+    transition: transform 0.3s linear;
+}
+
+.sign:hover{
+    cursor: pointer;
+    transform: scale(1.2) rotate(360deg);
 }

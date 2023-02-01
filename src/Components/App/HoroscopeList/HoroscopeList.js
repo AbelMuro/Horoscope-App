@@ -1,5 +1,7 @@
 import React from 'react';
+import images from './images';
 import {useNavigate} from 'react-router-dom';
+import "./styles.css"
 
 function HoroscopeList() {
     const navigate = useNavigate();
@@ -13,18 +15,18 @@ function HoroscopeList() {
 
     return(
         <section className="horoscopeList" onClick={handleClick}>
-            <img className="sign" id="aries"/>
-            <img className="sign" id="taurus"/>
-            <img className="sign" id="gemini"/>
-            <img className="sign" id="cancer"/>            
-            <img className="sign" id="leo"/>
-            <img className="sign" id="virgo"/>
-            <img className="sign" id="libra"/>            
-            <img className="sign" id="scorpio"/>
-            <img className="sign" id="sagittarus"/>
-            <img className="sign" id="capricorn"/>
-            <img className="sign" id="aquarius"/>
-            <img className="sign" id="pisces"/>
+            <img className="sign" src={images["aries"]} id="aries"/>
+            <img className="sign" src={images["taurus"]} id="taurus"/>
+            <img className="sign" src={images["gemini"]} id="gemini"/>
+            <img className="sign" src={images["cancer"]} id="cancer"/>            
+            <img className="sign" src={images["leo"]} id="leo"/>
+            <img className="sign" src={images["virgo"]} id="virgo"/>
+            <img className="sign" src={images["libra"]} id="libra"/>            
+            <img className="sign" src={images["scorpio"]} id="scorpio"/>
+            <img className="sign" src={images["sagittarius"]} id="sagittarus"/>
+            <img className="sign" src={images["capricorn"]} id="capricorn"/>
+            <img className="sign" src={images["aquarius"]} id="aquarius"/>
+            <img className="sign" src={images["pisces"]} id="pisces"/>
         </section>
     )
 }
