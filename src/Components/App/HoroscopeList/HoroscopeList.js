@@ -9,8 +9,9 @@ function HoroscopeList() {
     const handleClick = (e) => {
         if(!e.target || !e.target.matches(".sign")) return;
 
-        const sign = e.target.id;
-        navigate(`/${sign}`, {state: {sign : sign}});
+        const signName = e.target.id;
+        const signImage = e.target.src;
+        navigate(`/${signName}`, {state: {signName : signName, signImage: signImage}});
     }
 
     return(

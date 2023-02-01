@@ -9,7 +9,7 @@
 
 .sign{
     object-fit: contain;
-    height: 200px;
+    height: 250px;
     transition: transform 0.3s linear;
 }
 
@@ -19,9 +19,11 @@
 }
 
 .title{
+    margin: 30px auto 30px auto;
     grid-column: 1/5;
     font-size: 40px;
-    color: #797133;
+    color: #bab45e;
     text-align: center;
-
+    background-color: black;
+    width: 500px;
 }

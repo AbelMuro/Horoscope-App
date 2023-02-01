@@ -1,6 +1,13 @@
 body{
     background-image: url('./images/astrology background.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: black;
+    background-position: top center;
+}
+
+@media (max-width: 780px){
+    body{
+        background-size: cover;
+    }
 }

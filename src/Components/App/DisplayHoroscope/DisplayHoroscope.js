@@ -16,7 +16,7 @@ function DisplayHoroscope() {
             }
         };
         
-        fetch(`https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${state.sign}&day=today`, options)        //remember to write in your notes
+        fetch(`https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${state.signName}&day=today`, options)        //remember to write in your notes
             .then(response => response.json())                                                              // about the parameters that must
             .then(results => setHoroscope(results))                                                         // be included in some api calls 
             .catch(err => console.error(err));
@@ -25,7 +25,7 @@ function DisplayHoroscope() {
 
     return horoscope ? (
         <section className="horoscope">
-    
+                <></>
         </section>
     ) : (<></>)
 
