@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import HoroscopeList from './HoroscopeList';
 import DisplayHoroscope from './DisplayHoroscope';
+import "./styles.css";
 
 function App() {
     return(

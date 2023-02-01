@@ -17,3 +17,11 @@
     cursor: pointer;
     transform: scale(1.2) rotate(360deg);
 }
+
+.title{
+    grid-column: 1/5;
+    font-size: 40px;
+    color: #797133;
+    text-align: center;
+
+}

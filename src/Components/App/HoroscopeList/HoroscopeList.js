@@ -15,6 +15,9 @@ function HoroscopeList() {
 
     return(
         <section className="horoscopeList" onClick={handleClick}>
+            <h1 className="title">
+                Select your sign
+            </h1>
             <img className="sign" src={images["aries"]} id="aries"/>
             <img className="sign" src={images["taurus"]} id="taurus"/>
             <img className="sign" src={images["gemini"]} id="gemini"/>
