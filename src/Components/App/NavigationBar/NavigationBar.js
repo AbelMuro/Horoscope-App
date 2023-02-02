@@ -13,7 +13,7 @@ function NavigationBar() {
     return(
         <nav className="navBar">
             <p className="horoscopeTitle">
-                Horoscope app
+                Daily Horoscope app
             </p>
             <button className={"goBackButton"} onClick={handleClick}>
                 Go Back
