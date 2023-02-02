@@ -20,6 +20,7 @@ const PositionedRightArrow = styled(ArrowForwardIosIcon)`
     font-size: 50px;
     display: block;
     margin: auto;
+    
     &: hover{
         cursor: pointer;
         color: yellow;

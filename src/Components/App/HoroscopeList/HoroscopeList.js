@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import images from './images';
 import {useNavigate} from 'react-router-dom';
 import "./styles.css"
@@ -13,6 +13,10 @@ function HoroscopeList() {
         const signImage = e.target.src;
         navigate(`/${signName}`, {state: {signName : signName, signImage: signImage}});
     }
+
+    useEffect(() => {
+        //this is where i left off, i want to use a media query from MUI to change the body background-repeat to repeat when the viewport enters mobile size
+    })
 
     return(
         <section className="horoscopeList" onClick={handleClick}>

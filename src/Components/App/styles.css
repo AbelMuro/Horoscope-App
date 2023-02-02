@@ -16,6 +16,6 @@ body{
 
 @media(max-width: 500px){
     body{
-        background-image: url('./images/mobile\ astrology\ background.jpg');
+        background-position: 0 40px;
     }
 }

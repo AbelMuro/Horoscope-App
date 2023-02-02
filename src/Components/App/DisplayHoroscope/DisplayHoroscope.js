@@ -57,6 +57,10 @@ function DisplayHoroscope() {
             setLoading(false);
     }, [horoscope])
 
+    useEffect(() => {
+        
+    }, [])
+
 
     return horoscope ? (
         <>

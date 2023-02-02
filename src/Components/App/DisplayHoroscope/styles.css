@@ -29,3 +29,16 @@
     position: relative;
     padding: 10px;
 }
+
+@media (max-width: 500px){
+    .horoscopeImage{
+        width: 200px;
+    }
+    .horoscope{
+        width: 300px;
+    }
+
+    .desc{
+        min-height: 412px;
+    }
+}
