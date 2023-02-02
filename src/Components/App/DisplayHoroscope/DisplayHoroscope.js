@@ -65,7 +65,7 @@ function DisplayHoroscope() {
                     {state.signName}
                 </h1>
                 <img src={state.signImage} className="horoscopeImage"/>
-                <Arrows setState={setState}/>
+                <Arrows setState={setState}/>                    
                 <div className="desc">
                     {loading ? <StyledLoadingTextIcon /> : horoscope.description }
                 </div>

@@ -2,16 +2,35 @@
     position: absolute;
     color: white;
     transform: translateY(-50%);
+    width: 65px;
+    height: 80px;
 }
 
 .left{
     left: 0px;
-    top: 40%;
+    top: 35%;
+}
+.left p:nth-of-type(1){
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
 }
 
 .right{
     right: 0px;
-    top: 40%;
+    top: 35%;
+}
+
+.right p:nth-of-type(1){
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
 }
 
 .currentReading{

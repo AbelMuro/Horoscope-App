@@ -7,9 +7,9 @@ import "./styles.css"
 const PositionedLeftArrow = styled(ArrowBackIosIcon)`
     color: white;
     font-size: 50px;
-    display: block;
-    margin: auto;
-    
+    position: absolute;
+    left: 15px;
+ 
     &: hover{
         cursor: pointer;
         color: yellow;
@@ -18,7 +18,9 @@ const PositionedLeftArrow = styled(ArrowBackIosIcon)`
 const PositionedRightArrow = styled(ArrowForwardIosIcon)`
     color: white;
     font-size: 50px;
-    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
     margin: auto;
     
     &: hover{
