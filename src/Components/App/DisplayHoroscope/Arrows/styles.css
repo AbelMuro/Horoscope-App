@@ -1,0 +1,21 @@
+.left, .right{
+    position: absolute;
+    color: white;
+}
+
+.left{
+    left: 0px;
+    top: 40%;
+}
+
+.right{
+    right: 0px;
+    top: 40%;
+}
+
+.currentReading{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}

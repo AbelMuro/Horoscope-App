@@ -1,32 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {CircularProgress} from '@mui/material';
 import {styled} from "@mui/system";
 import {useLocation} from 'react-router-dom';
+import Arrows from './Arrows';
 import "./styles.css";
 
-const PositionedLeftArrow = styled(ArrowBackIosIcon)`
-    color: white;
-    font-size: 50px;
-    display: block;
-    margin: auto;
-    
-    &: hover{
-        cursor: pointer;
-        color: yellow;
-    }
-`
-const PositionedRightArrow = styled(ArrowForwardIosIcon)`
-    color: white;
-    font-size: 50px;
-    display: block;
-    margin: auto;
-    &: hover{
-        cursor: pointer;
-        color: yellow;
-    }
-`
 
 const StyledLoadingIcon = styled(CircularProgress)`
     color: white;
@@ -65,36 +43,8 @@ function DisplayHoroscope() {
             .catch(err => console.error(err));
     }
 
-    const handleClick = (e) => {
-    //note to my future self, what the following function does is select either <p> yesterday </p> or <p> tomorrow</p> from the DOM
-    //and will change the innerHTML based on what the user has clicked on
+    const setState = (day) => {
         setLoading(true);
-        const left = document.querySelector(".left");
-        const right = document.querySelector(".right"); 
-        let day = e.target.parentElement;       
-        const tagName = day.tagName.toLowerCase();             
-
-        if(tagName == "svg")                                    
-            day = day.parentElement.lastElementChild.innerHTML;
-        else 
-            day = day.lastElementChild.innerHTML;
-  
-        if(day == "yesterday"){
-            right.style.display = "";
-            right.lastElementChild.innerHTML = "today"
-            left.style.display = "none";
-        }
-        else if(day == "tomorrow"){
-            left.style.display = "";
-            left.lastElementChild.innerHTML = "today"
-            right.style.display = "none";
-        }
-        else if(day == "today"){
-            left.style.display = "";
-            left.lastElementChild.innerHTML = "yesterday";
-            right.style.display = "";
-            right.lastElementChild.innerHTML = "tomorrow"
-        }
         makeFetchRequest(state.signName, day) 
     }
 
@@ -114,20 +64,8 @@ function DisplayHoroscope() {
                 <h1 className="signName">
                     {state.signName}
                 </h1>
-
                 <img src={state.signImage} className="horoscopeImage"/>
-                <div className="left">
-                    <PositionedLeftArrow onClick={handleClick}/>
-                    <p>
-                        yesterday
-                    </p>
-                </div>
-                <div className="right">
-                    <PositionedRightArrow onClick={handleClick}/> 
-                    <p>
-                        tomorrow
-                    </p>
-                </div>
+                <Arrows setState={setState}/>
                 <div className="desc">
                     {loading ? <StyledLoadingTextIcon /> : horoscope.description }
                 </div>

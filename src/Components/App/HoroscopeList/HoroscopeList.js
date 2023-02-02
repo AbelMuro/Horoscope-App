@@ -19,18 +19,55 @@ function HoroscopeList() {
             <h1 className="title">
                 Select your sign
             </h1>
-            <img className="sign" src={images["aries"]} id="aries"/>
-            <img className="sign" src={images["taurus"]} id="taurus"/>
-            <img className="sign" src={images["gemini"]} id="gemini"/>
-            <img className="sign" src={images["cancer"]} id="cancer"/>            
-            <img className="sign" src={images["leo"]} id="leo"/>
-            <img className="sign" src={images["virgo"]} id="virgo"/>
-            <img className="sign" src={images["libra"]} id="libra"/>            
-            <img className="sign" src={images["scorpio"]} id="scorpio"/>
-            <img className="sign" src={images["sagittarius"]} id="sagittarus"/>
-            <img className="sign" src={images["capricorn"]} id="capricorn"/>
-            <img className="sign" src={images["aquarius"]} id="aquarius"/>
-            <img className="sign" src={images["pisces"]} id="pisces"/>
+            <div className="wrapper">
+                <img className="sign" src={images["aries"]} id="aries"/> 
+                <p>aries</p>
+            </div>
+            <div className="wrapper">
+                <img className="sign" src={images["taurus"]} id="taurus"/>
+                <p>taurus</p>
+            </div>
+            <div className="wrapper">
+                <img className="sign" src={images["gemini"]} id="gemini"/>
+                <p>gemini</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["cancer"]} id="cancer"/>
+                <p>cancer</p>   
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["leo"]} id="leo"/>
+                <p>leo</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["virgo"]} id="virgo"/>
+                <p>virgo</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["libra"]} id="libra"/>
+                <p>libra</p>  
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["scorpio"]} id="scorpio"/>
+                <p>scorpio</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["sagittarius"]} id="sagittarus"/>
+                <p>sagittarius</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["capricorn"]} id="capricorn"/>
+                <p>capricorn</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["aquarius"]} id="aquarius"/>
+                <p>aquarius</p>
+            </div>
+            <div className='wrapper'>
+                <img className="sign" src={images["pisces"]} id="pisces"/>
+                <p>pisces</p>
+            </div>
+           
         </section>
     )
 }
