@@ -23,6 +23,10 @@ function HoroscopeList() {
         else
             body.style.backgroundRepeat = "";
 
+        return () => {
+            body.style.backgroundRepeat = "";
+        }
+
     }, [mobile])
 
     return(

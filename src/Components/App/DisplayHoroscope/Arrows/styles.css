@@ -42,11 +42,11 @@
 
 @media (max-width: 500px){
     .left{
-        top: 35%;
+        top: 25%;
         left: -15px;
     }
     .right{
-        top: 35%;
+        top: 25%;
         right: -15px;
     }
 }
