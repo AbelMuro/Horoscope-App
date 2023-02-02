@@ -1,9 +1,17 @@
+@font-face {
+    font-family: "cursive";
+    src: url("./../FontFiles/Pacifico-Regular.ttf");
+}
+
 body{
+    margin: 0px;
+    min-height: 100vh;
     background-image: url('./images/astrology background.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-color: black;
     background-position: top center;
+    font-family: "cursive";
 }
 
 @media (max-width: 780px){
