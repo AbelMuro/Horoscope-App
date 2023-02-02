@@ -10,7 +10,7 @@
 .sign{
     object-fit: contain;
     height: 250px;
-    transition: transform 0.3s linear;
+    transition: transform 0.5s linear;
 }
 
 .sign:hover{
