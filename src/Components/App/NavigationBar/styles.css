@@ -58,3 +58,11 @@
     background-color: black;
 }
 
+
+
+@media(max-width: 640px){
+    .horoscopeTitle{
+        font-size: 20px;
+        align-self: center;
+    }
+}
