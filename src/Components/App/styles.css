@@ -3,6 +3,11 @@
     src: url("./../FontFiles/Pacifico-Regular.ttf");
 }
 
+:root{
+    --close: 50;
+    --far: 10;
+}
+
 body{
     margin: 0px;
     min-height: 100vh;

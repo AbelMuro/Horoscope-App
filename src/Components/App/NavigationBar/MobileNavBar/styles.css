@@ -1,0 +1,48 @@
+.sideMenu{
+    background-color: #ece579;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: -200px;
+    transition: left 0.4s linear;
+    border-right: 1px solid black;
+    box-shadow: 0px 5px 15px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: var(--close);
+}
+.sideMenuContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.whatsMySignMobile, .goBackButtonMobile{
+    background-color:yellow;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "cursive";
+    height: 30px;
+}
+
+.whatsMySignMobile{
+    width: 120px;
+    font-size: 15px;
+
+}
+.goBackButtonMobile {
+    width: 80px;
+}
+
+.goBackButtonMobile:hover, .whatsMySignMobile:hover{
+    background-color: rgb(61, 61, 61);
+    color: yellow;
+}
+
+.goBackButtonMobile:active, .whatsMySignMobile:active{
+    background-color: black;
+}

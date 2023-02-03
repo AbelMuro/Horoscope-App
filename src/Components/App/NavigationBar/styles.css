@@ -7,59 +7,6 @@
     padding: 0 10px 0 10px;
 }
 
-.horoscopeTitle{
-    color: black;
-    font-size: 30px;
-    margin: -5px 0 0 0;
-    font-weight: 600;
-}
-
-.buttons{
-    width: 210px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.whatsMySign, .goBackButton{
-    background-color:yellow;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: "cursive";
-    height: 30px;
-}
-
-.whatsMySign{
-    width: 120px;
-    font-size: 15px;
-}
-.goBackButton {
-    width: 80px;
-    align-self: center;
-}
-.submit, .cancel{
-    background-color: yellow;
-    border: none;
-    padding: 5px;
-    font-family: "cursive";
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.goBackButton:hover, .whatsMySign:hover, 
-.submit:hover, .cancel:hover{
-    background-color: rgb(61, 61, 61);
-    color: yellow;
-}
-
-.goBackButton:active, .whatsMySign:active, 
-.submit:active, .cancel:active{
-    background-color: black;
-}
-
-
-
 @media(max-width: 640px){
     .horoscopeTitle{
         font-size: 20px;
