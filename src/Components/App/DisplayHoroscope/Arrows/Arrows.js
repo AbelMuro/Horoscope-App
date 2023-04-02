@@ -33,7 +33,7 @@ const PositionedRightArrow = styled(ArrowForwardIosIcon)`
 function Arrows({setState}){
 
     const handleClick = (e) =>{
-        //note to my future self, what the following function does is select either 
+        //note to my future self, what the following function does, is select either 
         //<p> yesterday </p> or 
         //<p> tomorrow</p> 
         //from the DOM

@@ -4,6 +4,7 @@ import {styled} from "@mui/system";
 import {useLocation} from 'react-router-dom';
 import Arrows from './Arrows';
 import "./styles.css";
+import images from '../images';
 
 
 const StyledLoadingIcon = styled(CircularProgress)`
@@ -25,21 +26,20 @@ const StyledLoadingTextIcon = styled(CircularProgress)`
 function DisplayHoroscope() {
     const [horoscope, setHoroscope] = useState(null);
     const [loading, setLoading] = useState(false);
-    const Api_Key = process.env.api_key;
     const {state} = useLocation();
 
     const makeFetchRequest = (signName, day) => {
         const options = {
-            method: 'POST',
+            method: 'GET',
             headers: {
-                'X-RapidAPI-Key': Api_Key,
-                'X-RapidAPI-Host': 'sameer-kumar-aztro-v1.p.rapidapi.com'
+                'X-RapidAPI-Key': process.env.api_key,
+                'X-RapidAPI-Host': process.env.host
             }
         };
         
-        fetch(`https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${signName}&day=${day}`, options)       
-            .then(response => response.json())                                                              
-            .then(results => setHoroscope(results))                                                        
+        fetch(`https://horoscopes-ai.p.rapidapi.com/get_horoscope/${signName}/${day}/general/en`, options)
+            .then(response => response.json())
+            .then(response => setHoroscope(response))
             .catch(err => console.error(err));
     }
 
@@ -64,10 +64,10 @@ function DisplayHoroscope() {
                 <h1 className="signName">
                     {state.signName}
                 </h1>
-                <img src={state.signImage} className="horoscopeImage"/>
+                <img src={images[state.signName]} className="horoscopeImage"/>
                 <Arrows setState={setState}/>                    
                 <div className="desc">
-                    {loading ? <StyledLoadingTextIcon /> : horoscope.description }
+                    {loading ? <StyledLoadingTextIcon /> : horoscope.general}
                 </div>
             </section>    
         </>

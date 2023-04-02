@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import {useMediaQuery} from '@mui/material';
-import images from './images';
+import images from '../images';
 import {useNavigate} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
 import "./styles.css"
 
 function HoroscopeList() {
     const navigate = useNavigate();
     const mobile = useMediaQuery("(max-width: 1190px)");
-    const dispatch = useDispatch();
 
     const handleClick = (e) => {
         if(!e.target || !e.target.matches(".sign")) return;
@@ -31,9 +29,6 @@ function HoroscopeList() {
 
     }, [mobile])
 
-    useEffect(() => {
-        dispatch({type: "set", images: images});
-    },[])
 
     return(
         <section className="horoscopeList" onClick={handleClick}>

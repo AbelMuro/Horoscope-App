@@ -2,7 +2,6 @@ import React, {useState, memo} from 'react';
 import {Dialog, DialogTitle, 
     DialogContent, DialogActions, 
     Select, MenuItem} from '@mui/material';
-import {useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import "./styles.css";
 
@@ -26,7 +25,6 @@ const months = {
 function DialogBox({open, handleDialog}) {
     const navigate = useNavigate();
     const [monthChoosen, setMonthChoosen] = useState("January");
-    const images = useSelector(state => state.images);
     const [dayChoosen, setDayChoosen] = useState(1);
 
     const displayAllMonths = () => {
@@ -90,7 +88,7 @@ function DialogBox({open, handleDialog}) {
         else if((monthChoosen == "June" && dayChoosen >= 22) || (monthChoosen == "July" && dayChoosen <= 22))
             sign = "pisces";
 
-        navigate(`/${sign}`, {state: {signName: sign, signImage : images[sign]}})
+        navigate(`/${sign}`, {state: {signName: sign}})
     }
 
 
