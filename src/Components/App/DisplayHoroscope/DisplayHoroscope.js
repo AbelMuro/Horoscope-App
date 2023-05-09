@@ -28,25 +28,29 @@ function DisplayHoroscope() {
     const [loading, setLoading] = useState(false);
     const {state} = useLocation();
 
-    const makeFetchRequest = (signName, day) => {
+    const makeFetchRequest = async (signName, day) => {
+        const url = `https://horoscopes-ai.p.rapidapi.com/get_horoscope_en/${signName}/${day}/general`;
         const options = {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': process.env.api_key,
-                'X-RapidAPI-Host': process.env.host
+                'X-RapidAPI-Host': process.env.host,
             }
         };
         
-        fetch(`https://horoscopes-ai.p.rapidapi.com/get_horoscope/${signName}/${day}/general/en`, options)
-            .then(response => response.json())
-            .then(response => setHoroscope(response))
-            .catch(err => console.error(err));
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            setHoroscope(result);
+        } catch (error) {
+            console.error(error);
+        }
     }
 
-    const setState = (day) => {
+  /* const setState = (day) => {
         setLoading(true);
         makeFetchRequest(state.signName, day) 
-    }
+    } */
 
     useEffect(() => {
         makeFetchRequest(state.signName, "today"); 
@@ -65,9 +69,9 @@ function DisplayHoroscope() {
                     {state.signName}
                 </h1>
                 <img src={images[state.signName]} className="horoscopeImage"/>
-                <Arrows setState={setState}/>                    
+                {/* Arrows setState={setState}/>  */ }                 
                 <div className="desc">
-                    {loading ? <StyledLoadingTextIcon /> : horoscope.general}
+                    {loading ? <StyledLoadingTextIcon /> : horoscope.general[0]}
                 </div>
             </section>    
         </>
