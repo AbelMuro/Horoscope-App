@@ -27,15 +27,9 @@
     cursor: pointer;
     font-family: "cursive";
     height: 30px;
-}
-
-.whatsMySignMobile{
     font-size: 15px;
+}
 
-}
-.goBackButtonMobile {
-    width: 80px;
-}
 
 .goBackButtonMobile:hover, .whatsMySignMobile:hover{
     background-color: rgb(61, 61, 61);
