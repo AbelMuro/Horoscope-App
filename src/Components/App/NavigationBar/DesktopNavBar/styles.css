@@ -14,6 +14,7 @@
 
 .whatsMySign, .goBackButton{
     background-color:yellow;
+    color: black;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -22,7 +23,6 @@
 }
 
 .whatsMySign{
-    width: 120px;
     font-size: 15px;
 }
 .goBackButton {
