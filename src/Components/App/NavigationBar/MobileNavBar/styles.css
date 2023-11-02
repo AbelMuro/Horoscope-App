@@ -22,6 +22,7 @@
 
 .whatsMySignMobile, .goBackButtonMobile{
     background-color:yellow;
+    color: black;
     border-radius: 10px;
     border: none;
     cursor: pointer;
